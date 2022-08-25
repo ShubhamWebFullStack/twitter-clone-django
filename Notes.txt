@@ -1,0 +1,62 @@
+🥀🥀🌳 Twitter Clone Using Django Framework 🌳🍃🍃
+
+🌿🍁👨🏻‍💻 Critical Pointers 👨🏻‍💻🍁🌿
+
+🌷 #1. Asynchronus Server Gateway Interface (ASGI) => When Web Server is Running, Flow of Data & Application Code Elements in the ASGI Packets travel via WSGI Medium into the Web Server Development Environment.
+
+🌷 #2. Web Server Gateway Interface (WSGI) => Medium through which Application Code is transferred into your Web Server Development Environment.
+
+🌷 #3. Process Flow of Django Project:-
+       ⭐ #1. Web Server Development Environment starts by python manage.py runserver.
+       ⭐ #2. "MANAGE.PY" is going to check all the required settings of djangoproject in SETTINGS.PY, WSGI.PY, & ASGI.PY. Then, the Local Web Development Server Runs.
+       ⭐ #3. 🟢 Development Server => GET => localhost (http://127.0.0.1:8000/).
+       ⭐ #4. 🟢 Development Server => GET => Default Django Server View will be visible.
+       ⭐ #5. 🟢 Development Server => GET => Default Django Server View will be replaced with djangoproject (URLS.PY) => Apps (URLS.PY) => Apps (VIEWS.PY) => Function-based View will be rendered on Browser as an Output using Http Method.
+       ⭐ #6. 🟢 Development Server => Specific View is linked to specific Url.
+       ⭐ #7. 🟢 Development Server => VIEWS.PY is going to call/render MODELS.PY, FORMS.PY, SERIALIZERS.PY, TEMPLATES, & STATIC FILES.
+       ⭐ #8. First Function-based View => POST & GET all your posts into/from DB.
+       ⭐ #9. form = PostForm(request.POST(I/O), request.FILES(I/O)) is an instance/object of a PostForm Class & all Form Post Data & Img Files will be Validated & Stored inside the form variable after validaiton done by ModelForm Class in FORMS.PY.
+
+
+🌳🔥🍂 Master the following Steps to expertise the Twitter Clone built using Django Framework 🍂🔥🌳
+
+🥀 ✅#1. Terminal - pwd, ls, cd, python, pip, django version & upgrade.
+🥀 ✅#2. Terminal - create djangoproject, cd djangoproject, open djangoproject in VS Code.
+🥀 ✅#3. VS Code - Migrate Default DB Schema.
+🥀 ✅#4. VS Code - Create Super User.
+🥀 ✅#5. VS Code - Run the Development Server.
+🥀 ✅#6. VS Code - Create a Django App - "posts" for CRUD Operations.
+🥀 ✅#7. VS Code - Register the App in djangoproject - SETTINGS.PY - Installed Apps Section.
+🥀 ✅#8. VS Code - Configure, Set & Include the "posts" App URLS.PY in djangoproject - URLS.PY.
+🥀 ✅#9. VS Code - Configure, Set & Create the "posts" App URLS.PY in "posts" App.
+🥀 ✅#10. VS Code - Create a simple function based view using HttpResponse Method in "posts" App - VIEWS.PY.
+🥀 ✅#11. VS Code - Create a Post Model Class with required Model Fields in "posts" App - MODELS.PY.
+🥀 ✅#12. VS Code - Install, Create Account, Set & Configure your Cloudinary Credentials in djangoproject - SETTINGS.PY & Register the Cloudinary App in djangoproject - SETTINGS.PY - Installed Apps Section. - (ERROR: must supply_api_key).
+🥀 ✅#13. VS Code - Register the "POST" Model in ADMIN.PY.
+🥀 ✅#14. VS Code - Create a DB Schema of Post Model created in MODELS.PY & Migrate (Store) the DB Schema into the SQLite3 Database in the form of Tables.
+🥀 ✅#15. VS Code - Convert all Post Meta(object) into Proper Readable String using __str__ Constructor Function in "posts" App MODELS.PY.
+🥀 ✅#16. VS Code - Create a First Function-based View => POST & GET all your posts into/from DB Tables to render on Templates along with data dict.
+🥀 ✅#17. VS Code - Create a Templates Folder.
+🥀 ✅#18. VS Code - Add the templates folder with BASE_DIR inside the SETTINGS.PY.
+🥀 ✅#19. VS Code - Create a base.html & posts.html using Django Ginger Templating Syntax.
+🥀 ✅#20. VS Code - Create a base.html in order to re-use the common syntax.
+🥀 ✅#21. Django Ginger Template Syntax => {% Logical Code %} & {{ Data/Value/Variable from Local Variable/DB/VIEWS.PY }}.
+🥀 ✅#22. Pair of Block Syntax => {% block var %}{{ var }}{% endblock var %} => To Store Data inside the Block Content (Valueholder) with Keyword & Variable name using for multiple webpages of a website.
+🥀 ✅#23. VS Code - Create a Static Folder.
+🥀 ✅#24. VS Code - Add the Static folder with STATIC_ROOT, STATIC_URL, STATICFILES_DIRS List = BASE_DIR inside the SETTINGS.PY.
+🥀 ✅#25. VS Code - Create the Static Files & Folders => css(posts.css), img, js(posts.js).
+🥀 ✅#26. VS Code - Static Files are loaded & imported using {% load static %} and usage syntax is like as src = "{% static "img/heart.png" %}" & href = "{% static "css/posts.css" %}" & src = "{% static "js/posts.js" %}".
+🥀 ✅#27. Django Template & VIEWS.PY method "POST" must be same.
+🥀 ✅#28. enctype="multipart/form-data" to get all data in readable format.
+🥀 ✅#29. {% csrf_token %} is required for validation purpose to submit the forms online.
+🥀 ✅#30. Beautify your Post Template using CSS.
+🥀 ✅#31. Create a Title, Post, Get Section in "posts" section.
+🥀 ✅#32. post_id is a URL Slug, post.id is to access data from DB.
+🥀 ✅#33. Virtual Environment:- python -m venv venv and venv\scripts\activate.
+🥀 #34. 
+🥀 #35. 
+🥀 #36. 
+🥀 #37. 
+🥀 #38. 
+🥀 #39. 
+🥀 #40. 

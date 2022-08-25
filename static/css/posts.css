@@ -1,0 +1,201 @@
+/* Default Styling */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 600px;
+  font-family: "Merriweather", serif;
+}
+
+/* Global Classes Styling */
+
+.border {
+  border: 1px solid darkturquoise;
+}
+
+.border-bottom {
+  border-bottom: 3px solid darkturquoise;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+/* Header Styling */
+
+.header {
+  padding: 1rem 1.5rem;
+}
+
+.header span {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.header .techis-logo {
+  margin-right: 1rem;
+  width: 3.5rem;
+}
+
+.divider {
+  border: none;
+  height: 0.4rem;
+  background-color: rgb(201, 198, 198);
+}
+
+.box-pad {
+  padding: 1rem 1.5rem;
+}
+
+/* Post Section Styling */
+
+.post-section {
+  padding: 1rem 1.5rem;
+}
+
+.profile-pic img {
+  width: 4rem;
+  margin-right: 1.5rem;
+}
+
+.django-post-form #name {
+  border-radius: 0.2rem;
+  padding: 0.5rem 0.5rem 0.5rem;
+  width: 20rem;
+  margin-bottom: 1rem;
+  outline: none;
+  border: none;
+  background-color: turquoise;
+  color: white;
+  font-weight: bold;
+}
+
+.django-post-form #body {
+  border-radius: 0.2rem;
+  padding: 0.5rem 0.5rem 0.5rem;
+  width: 27rem;
+  margin-bottom: 1rem;
+  outline: none;
+  border: none;
+  background-color: turquoise;
+  color: white;
+  font-weight: bold;
+}
+
+.django-post-form .submit-btn,
+.django-post-form .cancel-btn,
+.django-post-form .update-btn {
+  border-radius: 0.2rem;
+  padding: 0.5rem 1rem;
+  background-color: darkturquoise;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Get Section Styling */
+
+.get-section li {
+  position: relative;
+}
+
+.get-section .menu-icon,
+.get-section .menu {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 0.8rem;
+  color: #c74127;
+}
+
+.get-section .menu {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 2.8rem;
+  color: white;
+  font-weight: bold;
+  border: 1px solid #080808;
+  background-color: darkturquoise;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.8rem;
+  border-radius: 0.6rem;
+}
+
+.get-section .menu a {
+  color: white;
+  font-weight: bold;
+}
+
+
+
+.get-section .menu-icon {
+  width: 1.5rem;
+}
+
+.get-section .profile-pic {
+  width: 4rem;
+  margin-right: 1.5rem;
+}
+
+.django-get-form {
+  line-height: 1;
+}
+
+.django-get-form .name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #535355;
+}
+
+.django-get-form .datetime {
+  font-size: 0.8rem;
+  color: #a6a6a9;
+  position: relative;
+  bottom: 0.5rem;
+}
+
+.django-get-form .body {
+  font-size: 1.1rem;
+  color: black;
+  font-weight: 600;
+  line-height: 1.4rem;
+  font-family: 'Handlee', cursive;
+}
+
+.django-get-form .post-img, .django-post-form img {
+  width: 26rem;
+  border-radius: 0.6rem;
+  margin: 0.6rem 0rem;
+}
+
+.django-get-form .like img {
+  width: 1.6rem;
+}
+
+ul.django-get-form-container {
+  padding: 0;
+}

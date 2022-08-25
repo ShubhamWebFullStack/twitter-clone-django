@@ -1,0 +1,77 @@
+{% extends 'base.html' %} {% block title %} Edit | Django Twitter Clone 
+{% endblock title %} {% block content %} {% load static %}
+
+<div class="header border-bottom flex align-center">
+  <a href="/">
+    <img class="techis-logo" src="{% static "img/techis-logo.png" %}"
+    alt="techis-logo">
+  </a>
+  <span>Edit - Twitter Clone</span>
+</div>
+
+<section class="post-section">
+  <div class="django-post-form-container flex">
+    <div class="profile-pic">
+      <a href="#">
+        <img src="{% static "img/Profile-Pic-Crop-Circle.png" %}"
+        alt="profile-pic">
+      </a>
+    </div>
+    <div class="django-post-form">
+      <form
+        action="/edit/{{ post.id }}/"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        {% csrf_token %}
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Your Name"
+          value="{{ post.name }}"
+          required="True"
+        />
+        <br />
+        <textarea
+          name="body"
+          id="body"
+          placeholder="What's Happening?"
+          required="True"
+        >{{ post.body }}</textarea>
+        {% if post.image.url %}
+        <img src="{{ post.image.url }}" />
+        {% endif %}
+        <div class="upload-file-submit-btn flex justify-between align-center">
+          <input
+            class="upload-file"
+            type="file"
+            name="image"
+            id="image"
+            value="Choose File"
+          />
+          <input href="/" class="cancel-btn" type="submit" value="Cancel" />
+          <input class="update-btn" type="submit" value="Update" />
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"
+></script>
+<script>
+  $(function () {
+    // Executed when js-menu-icon is clicked
+    $(".js-menu-icon").click(function () {
+      // $(this) : Self elements, namely div.js-menu-icon
+      // next() : Next to div.js-menu-icon,namely div.menu
+      // toggle() : Switch show and Hide
+      $(this).next().toggle();
+    });
+  });
+</script>
+
+{% endblock content %}

@@ -1,0 +1,100 @@
+{% extends "base.html" %} {% block title %} Posts | Django Twitter Clone
+{% endblock title %} {% block content %} {% load static %}
+
+<div class="header border-bottom flex align-center">
+  <a href="#">
+    <img class="techis-logo" src="{% static "img/techis-logo.png" %}"
+    alt="techis-logo">
+  </a>
+  <span>Twitter Clone - Django Framework</span>
+</div>
+
+<section class="post-section">
+  <div class="django-post-form-container flex">
+    <div class="profile-pic">
+      <a href="#">
+        <img src="{% static "img/Profile-Pic-Crop-Circle.png" %}"
+        alt="profile-pic">
+      </a>
+    </div>
+    <div class="django-post-form">
+      <form action="/" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="text" name="name" id="name" placeholder="Your Name" />
+        <br />
+        <textarea
+          name="body"
+          id="body"
+          placeholder="What's Happening?"
+        ></textarea>
+        <div class="upload-file-submit-btn flex justify-between align-center">
+          <input class="upload-file" type="file" name="image" id="image" />
+          <input class="submit-btn" type="submit" value="Tweet" />
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section class="get-section">
+  <ul class="django-get-form-container">
+    {% for post in posts %}
+    <li class="box-pad border-bottom">
+      <img class="menu-icon js-menu-icon" src="{% static "img/menu.png" %}"
+      alt="menu-icon" />
+      <div class="menu">
+        <!-- URL Dispatcher:- Unique IDs are already assigned to each post and required function will be initiated. Executing Function to post the Data -->
+        <a href="/edit/{{ post.id }}/">Edit</a>
+        <br />
+        <a href="/delete/{{ post.id }}/">Delete</a>
+      </div>
+      <div class="django-post-form-container flex">
+        <div class="profile-pic">
+          <a href="#">
+            <img src="{% static "img/Profile-Pic-Crop-Circle.png" %}"
+            alt="profile-pic">
+          </a>
+        </div>
+        <div class="django-get-form">
+          <!-- Fetching Data from DB using Double bracket ginger templating -->
+          <div class="name">{{ post.name }}</div>
+          <br />
+          <div class="datetime">{{ post.updated_at }}</div>
+          <br />
+          <p class="body">{{ post.body }}</p>
+          <br />
+          {% if post.image.url %}
+          <img src="{{ post.image.url }}" alt="post-img" class="post-img" />
+          {% endif %}
+          <div class="like">
+            <a href="/like/{{ post.id }}/"
+              ><img src="{% static "img/heart.png" %}" alt="like-img"></a
+            >
+            {{ post.like_count }}
+          </div>
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"
+></script>
+<script>
+  $(function () {
+    // Executed when js-menu-icon is clicked
+    $(".js-menu-icon").click(function () {
+      // $(this) : Self elements, namely div.js-menu-icon
+      // next() : Next to div.js-menu-icon,namely div.menu
+      // toggle() : Switch show and Hide
+      $(this).next().toggle();
+    });
+  });
+</script>
+
+{% endblock content %}
